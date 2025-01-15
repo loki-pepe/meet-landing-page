@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Red Hat Display";
+    src: url("./assets/fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+    /* Colours */
+    --cyan-600: hsl(192 37% 48%);
+    --cyan-300: hsl(192 90% 77%);
+
+    --slate-900: hsl(240 21% 20%);
+    --slate-600: hsl(240 10% 57%);
+    --slate-300: hsl(240 18% 85%);
+
+    --white: hsl(0 0% 98%);
+
+    /* Spacing */
+    --spacing-1400: 112px;
+    --spacing-1000: 80px;
+    --spacing-900: 72px;
+    --spacing-800: 64px;
+    --spacing-700: 56px;
+    --spacing-500: 40px;
+    --spacing-400: 32px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;
+    --spacing-100: 8px;
+    --spacing-50: 4px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+  
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
