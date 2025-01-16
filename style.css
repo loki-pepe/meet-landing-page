@@ -73,6 +73,13 @@ h2 {
     font-size: var(--fs-2);
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--spacing-600);
+}
+
 hgroup > p {
     letter-spacing: var(--spacing-500);
     font-size: var(--fs-3);
