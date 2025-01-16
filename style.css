@@ -18,7 +18,7 @@
     --fs-1:/* 64px 48px */40px;
     --fs-2:/* 40px 36px */32px;
     --fs-3:/* 16px 14px */12px;
-    --fs-4:/* 18px*/ 16px;
+    --fs-4:/* 18px */16px;
     --fs-5: 16px;
 
     /* Spacing */
@@ -27,6 +27,7 @@
     --spacing-900: 72px;
     --spacing-800: 64px;
     --spacing-700: 56px;
+    --spacing-600: 48px;
     --spacing-500: 40px;
     --spacing-400: 32px;
     --spacing-300: 24px;
@@ -47,13 +48,37 @@
 body {
     min-height: 100vh;
     font-family: "Red Hat Display", sans-serif;
-}
-  
-img, picture {
-    display: block;
-    max-width: 100%;
+    text-align: center;
+    line-height: 1.1;
+    font-size: var(--fs-4);
+    font-weight: 500;
+    letter-spacing: 0;
 }
 
 button {
     font: inherit;
+    line-height: 1.5;
+    font-size: var(--fs-5);
+}
+
+h1, h2, hgroup, button {
+    font-weight: 900;
+}
+
+h1 {
+    font-size: var(--fs-1);
+}
+
+h2 {
+    font-size: var(--fs-2);
+}
+
+hgroup > p {
+    letter-spacing: var(--spacing-500);
+    font-size: var(--fs-3);
+}
+
+img, picture {
+    display: block;
+    max-width: 100%;
 }
