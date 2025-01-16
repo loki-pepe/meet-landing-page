@@ -7,9 +7,11 @@
     /* Colours */
     --cyan-600: hsl(192 37% 48%);
     --cyan-300: hsl(192 90% 77%);
+    --cyan-hover: hsl(192 54% 64%);
 
     --purple-600: hsl(268 34% 53%);
     --purple-300: hsl(268 100% 86%);
+    --purple-hover: hsl(268 55% 71%);
 
     --slate-900: hsl(240 21% 20%);
     --slate-600: hsl(240 10% 57%);
@@ -65,17 +67,27 @@ button {
     line-height: 1.5;
     font-size: var(--fs-5);
     color: var(--white);
+    padding: var(--spacing-200) var(--spacing-500);
+    border: none;
+    border-radius: 29px;
+    transition: background-color 500ms;
 }
 
 /* Button colors */
 .blue {
     background-color: var(--cyan-600);
 }
+.blue:hover {
+    background-color: var(--cyan-hover);
+}
 .blue span {
     color: var(--cyan-300);
 }
 .purple {
     background-color: var(--purple-600);
+}
+.purple:hover {
+    background-color: var(--purple-hover);
 }
 .purple span {
     color: var(--purple-300);
