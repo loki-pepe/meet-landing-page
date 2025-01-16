@@ -8,6 +8,9 @@
     --cyan-600: hsl(192 37% 48%);
     --cyan-300: hsl(192 90% 77%);
 
+    --purple-600: hsl(268 34% 53%);
+    --purple-300: hsl(268 100% 86%);
+
     --slate-900: hsl(240 21% 20%);
     --slate-600: hsl(240 10% 57%);
     --slate-300: hsl(240 18% 85%);
@@ -53,16 +56,42 @@ body {
     font-size: var(--fs-4);
     font-weight: 500;
     letter-spacing: 0;
+    background-color: var(--white);
+    color: var(--slate-600);
 }
 
 button {
     font: inherit;
     line-height: 1.5;
     font-size: var(--fs-5);
+    color: var(--white);
+}
+
+/* Button colors */
+.blue {
+    background-color: var(--cyan-600);
+}
+.blue span {
+    color: var(--cyan-300);
+}
+.purple {
+    background-color: var(--purple-600);
+}
+.purple span {
+    color: var(--purple-300);
+}
+
+footer {
+    color: var(--white);
+    background-color: var(--cyan-600); /* Temporary */
 }
 
 h1, h2, hgroup, button {
     font-weight: 900;
+}
+
+h1, h2 {
+    color: var(--slate-900);
 }
 
 h1 {
@@ -83,9 +112,15 @@ header {
 hgroup > p {
     letter-spacing: var(--spacing-50);
     font-size: var(--fs-3);
+    text-transform: uppercase;
 }
 
 img, picture {
     display: block;
     max-width: 100%;
+}
+
+.number {
+    color: var(--slate-600);
+    background-color: var(--white);
 }
