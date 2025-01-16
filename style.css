@@ -81,7 +81,7 @@ header {
 }
 
 hgroup > p {
-    letter-spacing: var(--spacing-500);
+    letter-spacing: var(--spacing-50);
     font-size: var(--fs-3);
 }
 
