@@ -98,7 +98,7 @@ footer {
     background-color: var(--cyan-600); /* Temporary */
 }
 
-h1, h2, hgroup, button {
+h1, h2, hgroup, button, .number {
     font-weight: 900;
 }
 
@@ -136,4 +136,22 @@ img, picture {
 .number {
     color: var(--slate-600);
     background-color: var(--white);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: solid 1px var(--slate-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: var(--spacing-1000);
+}
+
+.number::before {
+    content: "";
+    width: 1px;
+    height: var(--spacing-1000);
+    background-color: var(--slate-300);
+    position: absolute;
+    top: calc(-1 * var(--spacing-1000));
 }
