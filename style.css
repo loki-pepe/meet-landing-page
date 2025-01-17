@@ -63,6 +63,7 @@ body {
 }
 
 button {
+    flex: 0 0 auto;
     font: inherit;
     line-height: 1.5;
     font-size: var(--fs-5);
@@ -95,6 +96,14 @@ button:hover {
 }
 .purple span {
     color: var(--purple-300);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: var(--spacing-200);
+    row-gap: calc(1px + var(--spacing-200));
 }
 
 footer {
