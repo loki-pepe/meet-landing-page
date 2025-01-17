@@ -73,6 +73,10 @@ button {
     transition: background-color 500ms;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 /* Button colors */
 .blue {
     background-color: var(--cyan-600);
