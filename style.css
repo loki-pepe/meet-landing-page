@@ -121,7 +121,11 @@ h2 {
 }
 
 header {
-    margin: var(--spacing-600) var(--spacing-400) var(--spacing-400);
+    
+}
+
+header > h1, p, .buttons {
+    width: clamp(19.0625rem, 58.372396vw, 28.01875rem);
 }
 
 hgroup > p {
