@@ -19,12 +19,12 @@
 
     --white: hsl(0 0% 98%);
 
-    /* Font sizes - will use clamp with rem */
-    --fs-1:/* 64px 48px */40px;
-    --fs-2:/* 40px 36px */32px;
-    --fs-3:/* 16px 14px */12px;
-    --fs-4:/* 18px */16px;
-    --fs-5: 16px;
+    /* Font sizes */
+    --fs-1: clamp(2.5rem, 6.25vw, 4rem); /* 40px 48px 64px */
+    --fs-2: clamp(2rem, 4.6875vw, 2.5rem); /* 32px 36px 40px */
+    --fs-3: clamp(0.75rem, 1.82291667vw, 1rem); /* 12px 14px 16px*/
+    --fs-4: clamp(1rem, 2.08333333vw, 1.125rem); /* 16px 16px 18px */
+    --fs-5: 1rem; /* 16px */
 
     /* Spacing */
     --spacing-1400: 112px;
