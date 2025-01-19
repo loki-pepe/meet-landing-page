@@ -174,7 +174,7 @@ main hgroup {
 }
 
 main p {
-   width: clamp(265px, 65.625vw, 544px); /* Privremeno */
+   width: clamp(19.4375rem, 65.625vw, 34rem); /* Privremeno */
 }
 
 .number {
