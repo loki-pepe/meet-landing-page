@@ -62,6 +62,10 @@ body {
     color: var(--slate-600);
 }
 
+body > * {
+    padding: 0 var(--spacing-400);
+}
+
 button {
     flex: 0 0 auto;
     font: inherit;
@@ -136,11 +140,11 @@ h1, h2, hgroup, button, .number {
 h1, h2 {
     line-height: 1.1;
     color: var(--slate-900);
-    text-wrap: balance;
 }
 
 h1 {
     font-size: var(--fs-1);
+    text-wrap: balance;
 }
 
 h2 {
@@ -148,7 +152,7 @@ h2 {
 }
 
 header > h1, header > p, header > .buttons {
-    width: clamp(19.0625rem, 58.372396vw, 28.01875rem);
+    max-width: 28.01875rem;
 }
 
 hgroup > p {
@@ -165,8 +169,12 @@ img, picture {
     height: auto;
 }
 
-main {
-    padding: 0 var(--spacing-400);
+main hgroup {
+    max-width: 27.8125rem;
+}
+
+main p {
+   width: clamp(265px, 65.625vw, 544px); /* Privremeno */
 }
 
 .number {
