@@ -179,6 +179,10 @@ header > h1, header > p, header > .buttons {
     max-width: 28.01875rem;
 }
 
+header p {
+    margin-block: var(--spacing-300);
+}
+
 hgroup > p {
     letter-spacing: var(--spacing-50);
     line-height: 1.1;
@@ -187,10 +191,18 @@ hgroup > p {
     color: var(--cyan-600);
 }
 
+hgroup > h2 {
+    margin-block: var(--spacing-200) var(--spacing-400);
+}
+
 img, picture {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.logo {
+    padding-block-start: var(--spacing-600);
 }
 
 main {
