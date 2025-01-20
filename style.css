@@ -237,6 +237,10 @@ p {
 
 @media (min-width: 62rem) {
     .footer-container {
+        padding: var(--spacing-1400) var(--spacing-1000);
+        background:
+            linear-gradient(var(--cyan-transparent), var(--cyan-transparent)),
+            no-repeat center/cover url("./assets/desktop/image-footer.jpg");
         text-align: start;
         flex-direction: row;
         justify-content: center;
