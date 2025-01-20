@@ -8,6 +8,7 @@
     --cyan-600: hsl(192 37% 48%);
     --cyan-300: hsl(192 90% 77%);
     --cyan-hover: hsl(192 54% 64%);
+    --cyan-transparent: hsl(192 37% 48% / 0.87);
 
     --purple-600: hsl(268 34% 53%);
     --purple-300: hsl(268 100% 86%);
@@ -128,7 +129,7 @@ footer p {
 
 .footer-container {
     background:
-        linear-gradient(hsl(192 37% 48% / 0.87), hsl(192 37% 48% / 0.87)),
+        linear-gradient(var(--cyan-transparent), var(--cyan-transparent)),
         no-repeat center/cover url("./assets/tablet/image-footer.jpg");
     padding: var(--spacing-800) var(--spacing-400);
     display: flex;
