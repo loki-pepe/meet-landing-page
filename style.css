@@ -66,8 +66,8 @@ body {
     color: var(--slate-600);
 }
 
-body > * {
-    padding: 0 var(--spacing-400);
+body > *:not(footer), .footer-container {
+    padding-inline: var(--spacing-400);
 }
 
 button {
@@ -116,7 +116,6 @@ button:hover {
 
 footer {
     color: var(--white);
-    padding: 0;
 }
 
 footer h2 {
@@ -131,7 +130,7 @@ footer p {
     background:
         linear-gradient(var(--cyan-transparent), var(--cyan-transparent)),
         no-repeat center/cover url("./assets/tablet/image-footer.jpg");
-    padding: var(--spacing-800) var(--spacing-400);
+    padding-block: var(--spacing-800);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,6 +141,7 @@ footer p {
 
 .gallery {
     min-width: 16rem;
+    margin-block: var(--spacing-800);
     display: grid;
     gap: clamp(16px, 3.125vw, 36px);
     grid-template-columns: auto auto;
@@ -193,6 +193,10 @@ img, picture {
     height: auto;
 }
 
+main {
+    padding-block: var(--spacing-400) var(--spacing-800);
+}
+
 main hgroup {
     max-width: 27.8125rem;
 }
@@ -233,11 +237,20 @@ p {
         grid-template-columns: repeat(4, auto);
         grid-template-rows: auto;
     }
+
+    main {
+        padding-block-start: var(--spacing-700);
+    }
 }
 
 @media (min-width: 62rem) {
+
+    body > *:not(footer), .footer-container {
+        padding-inline: var(--spacing-1000);
+    }
+
     .footer-container {
-        padding: var(--spacing-1400) var(--spacing-1000);
+        padding-block: var(--spacing-1400);
         background:
             linear-gradient(var(--cyan-transparent), var(--cyan-transparent)),
             no-repeat center/cover url("./assets/desktop/image-footer.jpg");
@@ -258,6 +271,10 @@ p {
     .footer-container .buttons {
         flex-basis: 16rem;
         justify-content: flex-end;
+    }
+
+    main {
+        padding-block: var(--spacing-700) var(--spacing-900); 
     }
     
 }
