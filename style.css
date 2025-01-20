@@ -124,7 +124,9 @@ footer p {
 }
 
 .footer-container {
-    background-color: var(--cyan-600); /* Temporary */
+    background:
+        linear-gradient(hsl(192 37% 48% / 0.85), hsl(192 37% 48% / 0.85)),
+        no-repeat center/cover url("./assets/tablet/image-footer.jpg");
     padding: 64px 32px;
     display: flex;
     flex-direction: column;
