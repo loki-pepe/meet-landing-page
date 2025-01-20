@@ -116,6 +116,8 @@ button:hover {
 
 footer {
     color: var(--white);
+    display: flex;
+    flex-direction: column;
 }
 
 footer h2 {
@@ -175,6 +177,13 @@ h2 {
     font-size: var(--fs-2);
 }
 
+header {
+    padding-block: var(--spacing-600) var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header > h1, header > p, header > .buttons {
     max-width: 28.01875rem;
 }
@@ -201,20 +210,19 @@ img, picture {
     height: auto;
 }
 
-.logo {
-    padding-block-start: var(--spacing-600);
-}
-
 main {
     padding-block: var(--spacing-400) var(--spacing-800);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main hgroup {
     max-width: 27.8125rem;
 }
 
-main p {
-   width: clamp(19.4375rem, 65.625vw, 34rem); /* Privremeno */
+main > p {
+  max-width: 31.5rem;
 }
 
 .number {
@@ -229,6 +237,7 @@ main p {
     justify-content: center;
     position: relative;
     margin-top: var(--spacing-1000);
+    align-self: center;
 }
 
 .number::before {
@@ -288,5 +297,9 @@ p {
     main {
         padding-block: var(--spacing-700) var(--spacing-900); 
     }
+
+    main > p {
+        max-width: 34rem;
+      }
     
 }
