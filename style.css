@@ -125,7 +125,7 @@ footer p {
 
 .footer-container {
     background:
-        linear-gradient(hsl(192 37% 48% / 0.85), hsl(192 37% 48% / 0.85)),
+        linear-gradient(hsl(192 37% 48% / 0.87), hsl(192 37% 48% / 0.87)),
         no-repeat center/cover url("./assets/tablet/image-footer.jpg");
     padding: 64px 32px;
     display: flex;
