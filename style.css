@@ -190,6 +190,7 @@ header {
     padding-block: var(--spacing-600) var(--spacing-400);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 header h1, header p, header .buttons {
@@ -354,7 +355,6 @@ p {
     header {
         padding-block-start: var(--spacing-1000);
         align-items: center;
-        overflow: hidden;
     }
 
     .header-container {
