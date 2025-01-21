@@ -20,12 +20,12 @@
 
     --white: hsl(0 0% 98%);
 
-    /* Font sizes */
-    --fs-1: clamp(2.5rem, 6.25vw, 4rem); /* 40px 48px 64px */
-    --fs-2: clamp(2rem, 4.6875vw, 2.5rem); /* 32px 36px 40px */
-    --fs-3: clamp(0.75rem, 1.82291667vw, 1rem); /* 12px 14px 16px*/
-    --fs-4: clamp(1rem, 2.08333333vw, 1.125rem); /* 16px 16px 18px */
-    --fs-5: 1rem; /* 16px */
+    /* Font sizes */                                /* 375  768  1440 */
+    --fs-1: clamp(2.5rem, 6.25vw, 4rem);            /* 40px 48px 64px */
+    --fs-2: clamp(2rem, 4.6875vw, 2.5rem);          /* 32px 36px 40px */
+    --fs-3: clamp(0.75rem, 1.82291667vw, 1rem);     /* 12px 14px 16px */
+    --fs-4: clamp(1rem, 2.08333333vw, 1.125rem);    /* 16px 16px 18px */
+    --fs-5: 1rem;                                   /*      16px      */
 
     /* Spacing */
     --spacing-1400: 112px;
@@ -41,18 +41,32 @@
     --spacing-100: 8px;
     --spacing-50: 4px;
 
-    /* Sizing */
-    --number-size: 3.5rem;
+    --gallery-gap: clamp(16px, 3.125vw, 32px);
+    --gallery-img-width: clamp(9.21875rem, 19.79166667vw, var(--sizing-256));
+    --gallery-img-height: clamp(9rem, 20.83333333vw, var(--sizing-256));
 
-    /* Footer background */
+    /* Sizing */
+    --hero-height: clamp(160px, 40vw, 303px);
+    --number-size: 3.5rem;
+    --sizing-256: 16rem;
+    --sizing-355: 22.1875rem;
+    --sizing-445: 27.8125rem;
+    --sizing-504: 31.5rem;
+    --sizing-544: 34rem;
+
+    /* Backgrounds */
     --foot-bg-tablet:
         linear-gradient(var(--cyan-transparent), var(--cyan-transparent)),
         no-repeat center/cover url("./assets/tablet/image-footer.jpg")
     ;
-
     --foot-bg-desktop:
         linear-gradient(var(--cyan-transparent), var(--cyan-transparent)),
         no-repeat center/cover url("./assets/desktop/image-footer.jpg")
+    ;
+    --head-bg-tablet: url("./assets/tablet/image-hero.png") center/cover no-repeat;
+    --head-bg-desktop:
+        url("./assets/desktop/image-hero-left.png") left top/394px 303px no-repeat,
+        url("./assets/desktop/image-hero-right.png") right bottom/394px 303px no-repeat
     ;
 }
 
@@ -133,10 +147,6 @@ footer h2 {
     color: var(--white);
 }
 
-footer p {
-    max-width: 31.5rem;
-}
-
 .footer-container {
     background: var(--foot-bg-tablet);
     padding-block: var(--spacing-800);
@@ -149,10 +159,10 @@ footer p {
 }
 
 .gallery {
-    min-width: 16rem;
+    min-width: var(--sizing-256);
     margin-block: var(--spacing-800);
     display: grid;
-    gap: clamp(16px, 3.125vw, 32px);
+    gap: var(--gallery-gap);
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     justify-content: center;
@@ -162,8 +172,8 @@ footer p {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    width: clamp(9.21875rem, 19.79166667vw, 16rem);
-    height: clamp(9rem, 20.83333333vw, 16rem);
+    width: var(--gallery-img-width);
+    height: var(--gallery-img-height);
     border-radius: 8px;
     filter: contrast(1.15) brightness(0.9);
 }
@@ -193,8 +203,8 @@ header {
     overflow: hidden;
 }
 
-header h1, header p, header .buttons {
-    max-width: 27.8125rem;
+header h1, header p, header .buttons, main hgroup {
+    max-width: var(--sizing-445);
 }
 
 .header-container {
@@ -209,9 +219,9 @@ header h1, header p, header .buttons {
     display: block;
     position: relative;
     content: "";
-    height: clamp(160px, 40vw, 303px);
+    height: var(--hero-height);
     width: 100vw;
-    background: url("./assets/tablet/image-hero.png") center/cover no-repeat;
+    background: var(--head-bg-tablet);
     margin-block: var(--spacing-800) var(--spacing-300);
 }
 
@@ -248,14 +258,6 @@ main, .header-container, .footer-container {
     padding-inline: var(--spacing-400);
 }
 
-main hgroup {
-    max-width: 27.8125rem;
-}
-
-main > p {
-  max-width: 31.5rem;
-}
-
 .number {
     font-size: var(--fs-5);
     color: var(--slate-600);
@@ -282,7 +284,8 @@ main > p {
 }
 
 p {
-    text-wrap: pretty;
+    text-wrap: pretty; /* For Chromium*/
+    max-width: var(--sizing-504);
 }
 
 @media (min-width: 37.5rem) {
@@ -325,16 +328,16 @@ p {
     }
 
     .footer-container h2 {
-        flex-basis: 27.8125rem;
+        flex-basis: var(--sizing-445);
         
     }
 
     .footer-container p {
-        flex-basis: 22.1875rem;
+        flex-basis: var(--sizing-355);
     }
 
     .footer-container .buttons {
-        flex-basis: 16rem;
+        flex-basis: var(--sizing-256);
         justify-content: flex-end;
     }
 
@@ -343,7 +346,7 @@ p {
     }
 
     main > p {
-        max-width: 34rem;
+        max-width: var(--sizing-544);
       }
 }
 
@@ -363,11 +366,8 @@ p {
         align-items: center;
         justify-content: center;
         width: 103.6vw;
-        height: 360px;
-        background:
-            url("./assets/desktop/image-hero-left.png") left top/394px 303px no-repeat,
-            url("./assets/desktop/image-hero-right.png") right bottom/394px 303px no-repeat
-        ;
+        height: 22.5rem;
+        background: var(--head-bg-desktop);
         margin-block-start: var(--spacing-800);
         row-gap: var(--spacing-400);
     }
