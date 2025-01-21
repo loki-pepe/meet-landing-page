@@ -66,10 +66,6 @@ body {
     color: var(--slate-600);
 }
 
-body > *:not(footer), .footer-container {
-    padding-inline: var(--spacing-400);
-}
-
 button {
     flex: 0 0 auto;
     font: inherit;
@@ -145,7 +141,7 @@ footer p {
     min-width: 16rem;
     margin-block: var(--spacing-800);
     display: grid;
-    gap: clamp(16px, 3.125vw, 36px);
+    gap: clamp(16px, 3.125vw, 32px);
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     justify-content: center;
@@ -157,6 +153,7 @@ footer p {
     height: 100%;
     width: clamp(9.21875rem, 19.79166667vw, 16rem);
     height: clamp(9rem, 20.83333333vw, 16rem);
+    border-radius: 8px;
 }
 
 h1, h2, hgroup, button, .number {
@@ -181,15 +178,28 @@ header {
     padding-block: var(--spacing-600) var(--spacing-400);
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-header > h1, header > p, header > .buttons {
+header h1, header p, header .buttons {
     max-width: 28.01875rem;
 }
 
-header p {
-    margin-block: var(--spacing-300);
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: var(--spacing-300);
+}
+
+.header-container::before {
+    display: block;
+    position: relative;
+    content: "";
+    height: clamp(160px, 40vw, 303px);
+    width: 100vw;
+    background: url("./assets/tablet/image-hero.png") center/cover no-repeat;
+    margin-block: var(--spacing-800) var(--spacing-600);
 }
 
 hgroup > p {
@@ -210,11 +220,19 @@ img, picture {
     height: auto;
 }
 
+.logo {
+    align-self: center;
+}
+
 main {
     padding-block: var(--spacing-400) var(--spacing-800);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+main, .header-container, .footer-container {
+    padding-inline: var(--spacing-400);
 }
 
 main hgroup {
@@ -226,6 +244,7 @@ main > p {
 }
 
 .number {
+    font-size: var(--fs-5);
     color: var(--slate-600);
     background-color: var(--white);
     width: var(--number-size);
@@ -259,13 +278,26 @@ p {
         grid-template-rows: auto;
     }
 
+    header {
+        padding-block-end: var(--spacing-800);
+    }
+
+    .header-container::before {
+        margin-block-end: var(--spacing-900);
+    }
+
     main {
         padding-block-start: var(--spacing-700);
     }
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 820px) {
+    .header-container::before {
+        background-size: contain;
+    }
+}
 
+@media (min-width: 62rem) {
     body > *:not(footer), .footer-container {
         padding-inline: var(--spacing-1000);
     }
@@ -292,6 +324,7 @@ p {
     .footer-container .buttons {
         flex-basis: 16rem;
         justify-content: flex-end;
+        align-self: flex-start;
     }
 
     main {
@@ -301,5 +334,34 @@ p {
     main > p {
         max-width: 34rem;
       }
-    
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        margin-top: 0;
+    }
+
+    header {
+        padding-block-start: var(--spacing-1000);
+        align-items: center;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 104vw;
+        height: 360px;
+        background:
+            url("./assets/desktop/image-hero-left.png") left top/394px 303px no-repeat,
+            url("./assets/desktop/image-hero-right.png") right bottom/394px 303px no-repeat
+        ;
+        margin-block-start: var(--spacing-800);
+        row-gap: var(--spacing-400);
+    }
+
+    .header-container::before {
+        display:none;
+    }
 }
