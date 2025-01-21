@@ -311,7 +311,7 @@ p {
 }
 
 @media (min-width: 62rem) {
-    body > *:not(footer), .footer-container {
+    main, .header-container, .footer-container {
         padding-inline: var(--spacing-1000);
     }
 
@@ -347,7 +347,7 @@ p {
       }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
     h1 {
         margin-top: 0;
     }
